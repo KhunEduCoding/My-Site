@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>មេរៀន Excel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <style>
+        @font-face {
+            font-family: 'Khmer OS Moul';
+            src: url('Fonts/KhmerOSmuollight.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'Khmer OS System';
+            src: url('Fonts/KhmerOSsiemreap.ttf') format('truetype');
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Khmer OS System', Arial, sans-serif;
+        }
+
+        .khmer-moul {
+            font-family: 'Khmer OS Moul', Arial, sans-serif;
+        }
+
+        body {
+            font-family: 'Khmer OS System', Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            background-color: #5eb5c4; /* Green background color */
+            color: #fff; /* White text color */
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>មេរៀន Excel</h1>
+        <button id="menu-toggle" class="menu-toggle">☰</button>
+    </header>
+    <div class="container">
+        <nav class="sidebar">
+            <ul id="lesson-tabs">
+                <li><a href="#lesson1" class="tab-link active" data-tab="lesson1">មេរៀនទី ១: ការណែនាំនិង ចាប់ផ្តើមកម្មវិធី</a></li>
+                <li><a href="#lesson2" class="tab-link" data-tab="lesson2">មេរៀនទី ២: មុខងារមូលដ្ឋាន</a></li>
+                <li><a href="#lesson3" class="tab-link" data-tab="lesson3">មេរៀនទី ៣: រូបមន្ត</a></li>
+                <li><a href="#lesson4" class="tab-link" data-tab="lesson4">មេរៀនទី ៤: ការបង្ហាញទិន្នន័យ</a></li>
+                <li><a href="#lesson5" class="tab-link" data-tab="lesson5">មេរៀនទី ៥: តារាង Pivot</a></li>
+                <li><a href="#lesson6" class="tab-link" data-tab="lesson6">មេរៀនទី ៦: មុខងារខ្ពស់</a></li>
+                <li><a href="#lesson7" class="tab-link" data-tab="lesson7">មេរៀនទី ៧: វិភាគទិន្នន័យ</a></li>
+                <li><a href="#lesson8" class="tab-link" data-tab="lesson8">មេរៀនទី ៨: Macros</a></li>
+                <li><a href="#lesson9" class="tab-link" data-tab="lesson9">មេរៀនទី ៩: ការធ្វើការរួមគ្នា</a></li>
+                <li><a href="#lesson10" class="tab-link" data-tab="lesson10">មេរៀនទី ១០: ធនធានបន្ថែម</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <section id="lesson1" class="tab-content active">
+                <h2>មេរៀនទី ១: ការណែនាំពីកម្មវិធី</h2>
+                <ul>
+                    <li class="khmer-moul">គោលបំណង</li>
+                    <li><p>បន្ទាប់ពីបញ្ចប់មេរៀននេះអ្នកអាច៖</p></li>
+                    <ul>
+                        <li><p>ស្គាល់ពីអត្ថប្រយោជន៍នៃការប្រើប្រាស់ Toolbars</p></li>
+                        <li><p>ចេះរៀបចំ Page Setup</p></li>
+                        <li><p>ចេះប្រើប្រាស់ Row និង Column</p></li>
+                        <li><p>ចេះប្រើប្រាស់ Workbooks និង Worksheet</p></li>
+                        <li><p>ចេះប្រើប្រាស់ Tips និង Trick ជាដើម។</p></li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li class="khmer-moul">និយមន័យ</li>
+                    <li><p>Excel ឬ Microsoft Excel គឺជាឈ្មោះដែលកម្មវិធីដែលបង្កើតឡើងដោយក្រុមហ៊ុន Microsoft ត្រូវបានគេស្គាល់ ប្រើប្រាស់យ៉ាងទូលំទូលាយដោយក្រុមហ៊ុន និងបុគ្គលដើម្បីអនុវត្តប្រតិបត្តិការហិរញ្ញវត្ថុ និងគណនេយ្យដោយប្រើសៀវភៅបញ្ជី។ Microsoft Excel ប្រើសម្រាប់ការគណនាសាមញ្ញ និងស្មុគស្មាញ បង្កើតបញ្ជីទិន្នន័យ បង្កើតរបាយការណ៍ និងក្រាហ្វដ៏ស្មុគ្រស្មាញ ការព្យាករណ៍ និងការវិភាគនិន្នាការ ការវិភាគស្ថិតិ និងហិរញ្ញវត្ថុ បន្ថែមពីលើការមានភាសាកម្មវិធីរួមបញ្ចូលគ្នាដែលមានមូលដ្ឋាននៅលើ Visual Basic ។</p></li>
+                    <li class="khmer-moul">ការបើកកម្មវិធី</li>
+                    <li><p>របៀបនីមួយៗ៖</p></li>
+                    <ul>
+                        <li><p>របៀបទី១៖ ចុច Double Click លើ Icon (Shortcut) ដែលមាននៅលើ Desktop ស្រាប់</p></li>
+                        <li><p>របៀបទី២៖ ចុច "Windows" => វាយពាក្យ "Excel" => Open</p></li>
+                        <li><p>របៀបទី៣៖ ចុច "Windows + R" => វាយពាក្យ "Excel" => Enter</p></li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><p>ការបង្កើតឯកសារថ្មី</p></li>
+                    <ul>
+                        <li><p>របៀបទី១៖ ចុចជ្រើសរើសយក Blank Workbook បន្ទាប់ពីដំណើរការបើកកម្មវីធី</p></li>
+                        <li><p>របៀបទី២៖ ចុច "File" => "New" => Blank Workbook</p></li>
+                        <li><p>របៀបទី៣៖ ចុច "Ctrl + N"</p></li>
+                    </ul>
+                </ul>
+
+                <ul>
+                    <li><p>ចាប់ផ្តើមកម្មវិធី</p></li>
+                    <ul>
+                        <li><p>រូបភាពផ្ទាំងកម្មវិធី Microsoft Excel</p></li>
+                        <img src="Image/Interface.png" alt="Microsoft Excel Interface">
+                        <li><p>នៅក្នុង Workbook នៃកម្មវិធីនមានសន្លឹកកិច្ចការ (Worksheet) ជាច្រើន ហើយនៅក្នុងសន្លឹកកិច្ចការនីមួយៗមានជួរដេក (Row) ចំនួន 1048576 និងជួរឈរ (Column) ចំនួន 16384។</p></li>
+                        <li><p>➤ Tab Bar គឺជាកន្លែងមួយដែលមានផ្ទុក Tools ជាច្រើនសម្រាប់អនុវត្តន៍ការងារ</p></li>
+                        <li><p>➤ Active Cell គឺជាកន្លែងសម្រាប់បង្ហាញអាសយដ្ឋានរបស់ Cell</p></li>
+                        <li><p>➤ Formula Bar គឺជាកន្លែងសម្រាប់បង្ហាញរូបមន្ត ឬទិន្នន័យក្នុង Cell នីមួយៗ</p></li>
+                        <li><p>➤ Row គឺជាជួរដេកនៃ Cell</p></li>
+                        <li><p>➤ Columns គឺជាជួរឈរនៃ Cell</p></li>
+                        <li><p>➤ Cell គឺជាចំណុចប្រសព្វរវាង Row និង Columns</p></li>
+                        <li><p>➤ Work Book គឺជាស្រទាប់ការងាររបស់កម្មវិធី ហើយវាគ្រប់គ្រងលើសន្លឹកកិច្ចការ</p></li>
+                        <li><p>➤ Work Sheet គឺស្ថិតនៅក្រោមសៀវភៅកិច្ចការ (Work Book) ដែលគ្រប់គ្រងលើ Cell។</p></li>
+                    </ul>
+                </ul>
+            </section>
+            <section id="lesson2" class="tab-content">
+                <h2>មេរៀនទី ២: មុខងារមូលដ្ឋាន</h2>
+                <p>សិក្សាអំពីមុខងារមូលដ្ឋានដូចជា SUM, AVERAGE, MIN, និង MAX ។</p>
+            </section>
+            <section id="lesson3" class="tab-content">
+                <h2>មេរៀនទី ៣: រូបមន្ត</h2>
+                <p>យល់ពីវិធីបង្កើតនិងប្រើរូបមន្តក្នុង Excel សម្រាប់ការគណនា។</p>
+            </section>
+            <section id="lesson4" class="tab-content">
+                <h2>មេរៀនទី ៤: ការបង្ហាញទិន្នន័យ</h2>
+                <p>សិក្សាវិធីបង្កើតគំនូសតាងនិងគំនូសបង្ហាញទិន្នន័យ។</p>
+            </section>
+            <section id="lesson5" class="tab-content">
+                <h2>មេរៀនទី ៥: តារាង Pivot</h2>
+                <p>សិក្សាអំពីការប្រើតារាង Pivot សម្រាប់ការសង្ខេបនិងវិភាគទិន្នន័យ។</p>
+            </section>
+            <section id="lesson6" class="tab-content">
+                <h2>មេរៀនទី ៦: មុខងារខ្ពស់</h2>
+                <p>ស្វែងយល់អំពីមុខងារខ្ពស់ដូចជា VLOOKUP, HLOOKUP, និង IF statements។</p>
+            </section>
+            <section id="lesson7" class="tab-content">
+                <h2>មេរៀនទី ៧: វិភាគទិន្នន័យ</h2>
+                <p>បច្ចេកទេសសម្រាប់វិភាគទិន្នន័យក្នុង Excel រួមមានការត្រងនិងការរៀបចំ។</p>
+            </section>
+            <section id="lesson8" class="tab-content">
+                <h2>មេរៀនទី ៨: Macros</h2>
+                <p>ការណែនាំអំពីការបង្កើតនិងប្រើ Macros សម្រាប់ស្វ័យប្រវត្តិកម្មការងារនៅក្នុង Excel។</p>
+            </section>
+            <section id="lesson9" class="tab-content">
+                <h2>មេរៀនទី ៩: ការធ្វើការរួមគ្នា</h2>
+                <p>សិក្សាវិធីធ្វើការរួមគ្នាជាមួយអ្នកដទៃដោយប្រើលក្ខណៈពិសេសនៃការចែករំលែកនិងការរួមការងាររបស់ Excel។</p>
+            </section>
+            <section id="lesson10" class="tab-content">
+                <h2>មេរៀនទី ១០: ធនធានបន្ថែម</h2>
+                <p>ទីកន្លែងដែលអាចរកឃើញធនធាននិងការគាំទ្របន្ថែមសម្រាប់ការរៀន Excel។</p>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 មេរៀន Excel. រក្សាសិទ្ធិគ្រប់យ៉ាងដោយ <a href="https://t.me/Khornkhun_ac"> K.Khun ។</a> </p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab-link');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = document.getElementById(this.dataset.tab);
+
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    this.classList.add('active');
+                    target.classList.add('active');
+                });
+            });
+
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.querySelector('.sidebar');
+
+            menuToggle.addEventListener('click', function() {
+                sidebar.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
